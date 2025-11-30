@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OdontoCare</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        /* Light Theme */
+        --primary: #0d9488; /* Teal-600 */
+        --bg-light: #f9fafb; /* Gray-50 */
+        --bg-dark: #f3f4f6; /* Gray-100 */
+        --surface: #ffffff; /* White */
+        --surface-highlight: #f3f4f6; /* Gray-100 */
+        --text-light: #111827; /* Gray-900 */
+        --text-dark: #1f2937; /* Gray-800 */
+        --subtle-light: #e5e7eb; /* Gray-200 */
+        --subtle-dark: #d1d5db; /* Gray-300 */
+        --muted-light: #6b7280; /* Gray-500 */
+        --muted-dark: #4b5563; /* Gray-600 */
+      }
+
+      html.dark {
+        /* Dark Theme */
+        --primary: #00f2ea; 
+        --bg-light: #050505; 
+        --bg-dark: #000000;
+        --surface: #121212;
+        --surface-highlight: #1E1E1E;
+        --text-light: #f8fafc; 
+        --text-dark: #ffffff;
+        --subtle-light: #27272a;
+        --subtle-dark: #3f3f46;
+        --muted-light: #94a3b8;
+        --muted-dark: #cbd5e1;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+        background-color: var(--bg-light);
+        color: var(--text-light);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      /* Custom scrollbar for premium feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-light); 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary); 
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "var(--primary)",
+              "background-light": "var(--bg-light)",
+              "background-dark": "var(--bg-dark)",
+              "surface": "var(--surface)",
+              "surface-highlight": "var(--surface-highlight)",
+              "text-light": "var(--text-light)",
+              "text-dark": "var(--text-dark)",
+              "subtle-light": "var(--subtle-light)",
+              "subtle-dark": "var(--subtle-dark)",
+              "muted-light": "var(--muted-light)",
+              "muted-dark": "var(--muted-dark)",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              "2xl": "1rem",
+              full: "9999px",
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+              'hero-glow': 'conic-gradient(from 180deg at 50% 50%, #00f2ea22 0deg, #00000000 360deg)',
+            }
+          },
+        },
+      };
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/jsx-runtime": "https://aistudiocdn.com/react@^19.2.0/jsx-runtime",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "scheduler": "https://aistudiocdn.com/scheduler@^0.23.2",
+    "scheduler/": "https://aistudiocdn.com/scheduler@^0.23.2/"
+  }
+}
+</script>
+</head>
+  <body class="bg-background-light text-text-light font-display antialiased selection:bg-primary selection:text-black">
+    <div id="root"></div>
+    <script>
+      window.process = { env: { NODE_ENV: 'production' } };
+    </script>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
